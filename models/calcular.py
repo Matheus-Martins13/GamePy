@@ -31,7 +31,6 @@ class Calcular:
         return self.__resultado
 
     def __str__(self: object) -> str:
-        op: str = ''
         if self.operacao == 1:
             op = 'Somar'
         elif self.operacao == 2:
