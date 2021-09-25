@@ -7,20 +7,21 @@ def main() -> None:
 
 
 def jogar(pontos: int) -> None:
-    dificuldade: int = int(input('Informe o nível de dificuldade desejado [1, 2, 3 ou 4]: '))
+    print(100 * '\n')
+    dificuldade: int = int(input('Informe o nível de dificuldade desejado [1, 2, 3 ou 4]: \n>> '))
 
     calc: Calcular = Calcular(dificuldade)
 
-    print('Informe o resultado para a seguinte operação: ')
+    print('\n-------\nInforme o resultado para a seguinte operação: ')
     calc.mostrar_operacao()
 
-    resultado: int = int(input())
+    resultado: int = int(input('>> '))
 
     if calc.checar_resultado(resultado):
         pontos += 1
-        print(f'Você tem {pontos} pontos(s).')
+        print(f'Você tem {pontos} pontos(s).\n-------')
 
-    continuar: int = int(input('Deseja continuar no jogo? [1 - sim, 0 - não] '))
+    continuar: int = int(input('Deseja continuar no jogo? [1 - sim, 0 - não] \n>> '))
 
     if continuar:
         jogar(pontos)
